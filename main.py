@@ -35,7 +35,7 @@ print(50/2 == 25.0)
 text = "Merhaba Etiya"
 print(text.upper())
 print(text.lower())
-print(text.startswith("Meh"))
+print(text.startswith("Mer"))
 print(text.endswith("etiya"))
 
 name = "Kadriye"
