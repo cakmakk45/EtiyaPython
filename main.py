@@ -39,7 +39,7 @@ print(text.startswith("Mer"))
 print(text.endswith("etiya"))
 
 name = "Kadriye"
-age = 24
+age = 25
 company = "etiya"
 
 print(name+ " " + str(age) +" "+ "Yaşında " + company + "'de çalışıyor")
