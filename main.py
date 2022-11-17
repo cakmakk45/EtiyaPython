@@ -11,7 +11,7 @@ dnumber = 5.3
 print(dnumber)
 
 # matematiksel operatörler
-print(number + 5) 
+print(number + 7) 
 print(number - 5)
 print(number * 5)
 print(number / 5)
@@ -36,7 +36,7 @@ text = "Merhaba Etiya"
 print(text.upper())
 print(text.lower())
 print(text.startswith("Mer"))
-print(text.endswith("etiya"))
+print(text.endswith("Etiya"))
 
 name = "Kadriye"
 age = 25
@@ -44,3 +44,6 @@ company = "etiya"
 
 print(name+ " " + str(age) +" "+ "Yaşında " + company + "'de çalışıyor")
 print(f"{name} {age} yaşında {company} 'de çalışıyor")
+
+
+
