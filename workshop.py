@@ -23,14 +23,50 @@ lessonCount = int(input("Kaç adet ders notu gireceksiniz :"))
 #! 2. girilen ders sayısı kadar 2 adet soru sorulacak.
 #! (1. ders için vize notu giriniz. 1. ders için final notu giriniz)
 #! girilen notlar ondalıklı olabilir
-passedExamps = 0
-failedExamps = 0
+lessons = {}
+passedLessons = []
+failedLessons = []
 for i in range(lessonCount):
-    lessonExamp1 = float(input(f"{i+1}. ders için vize notunuzu giriniz."))
-    lessonExamp2 = float(input(f"{i+1}. ders için final notunuzu giriniz."))
-    totalExampNote = lessonExamp1*0.4 + lessonExamp2*0.6
-    if totalExampNote >= 50:
-        passedExamps += 1
+    lessonName = str(input(f"{i+1}. ders adını giriniz : "))
+    firstNote = float(input(f"{i+1}. ders için vize notunuzu giriniz."))
+    endNote = float(input(f"{i+1}. ders için final notunuzu giriniz."))
+    totalExampNote = firstNote*0.4 + endNote*0.6
+    lessons = {
+        
+    "Ders Adı": lessonName,
+    "Vize Notu": firstNote,
+    "Final Notu": endNote,
+    "ortalama": totalExampNote
+}
+    print(lessons)
+    
+    if lessons["ortalama"] >= 50:
+        passedLessons.append(lessons["Ders Adı"])
     else:
-        failedExamps += 1
-print(f"{passedExamps} dersten geçtiniz {failedExamps} dersten kaldınız")
+        failedLessons.append(lessons["Ders Adı"])
+   
+print("*********************************************") 
+    
+print(f"{len(passedLessons)} dersten geçtiniz {len(failedLessons)} dersten kaldınız")
+print("*********************************************")
+print(f"Geçtiğiniz dersler listesi : {passedLessons}")
+print(f"kaldığınız dersler listesi : {failedLessons}")
+
+    
+
+
+    
+    
+    
+  
+  
+  
+    #firstNote = float(input(f"{i+1}. dersi için vize notunuzu giriniz :"))
+    #lessonExamp2 = float(input(f"{i+1}. dersi için final notunuzu giriniz :"))
+    #totalExampNote = lessonExamp1*0.4 + lessonExamp2*0.6
+    #if totalExampNote >= 50:
+        #passedExamps += 1
+    #else:
+     #   failedExamps += 1
+#print(f"{passedExamps} dersten geçtiniz {failedExamps} dersten kaldınız")***
+
