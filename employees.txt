@@ -1,0 +1,4 @@
+
+employeeName : kadriye employeeSurname : çakmak - employeePay 500 
+employeeName : kadriye employeeSurname : cakmak - employeePay 677 
+employeeName : lale employeeSurname : gül - employeePay 900 

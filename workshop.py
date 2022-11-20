@@ -70,3 +70,8 @@ print(f"kaldığınız dersler listesi : {failedLessons}")
      #   failedExamps += 1
 #print(f"{passedExamps} dersten geçtiniz {failedExamps} dersten kaldınız")***
 
+
+
+
+
+
