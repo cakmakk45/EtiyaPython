@@ -1,0 +1,32 @@
+ER Model Nedir?
+
+
+Varlık-ilişki modeli (ER modeli), varlık- ilişki diyagramı (ER diyagramı) olarak bilinen bir şemanın yardımıyla oluşturulan veri tabanının yapısını açıklar. ER modeli, daha sonra veri tabanı olarak uygulanabilecek bir tasarım veya plandır. ER modelinin ana bileşenleri şunlardır; varlık kümesi ve ilişki kümesi. Bu metinde size ER modeli ve diyagramının ne olduğunu ve neden kullanıldığını açıklayacağım 
+
+ER Diyagramı Nedir?
+ER diyagramını, varlık kümeleri arasındaki ilişkiyi göstermek için kullanırız. Bir varlık grubu, benzer varlıklardan oluşan bir gruptur ve bu varlıklar belirli özniteliklere sahip olabilir. DBMS (Veri Tabanı Yönetim Sistemi) açısından bir varlık, veri tabanındaki bir tablonun bir tablosu veya özniteliğidir, dolayısıyla tablolar ve öznitelikleri arasındaki ilişkiyi göstererek ER diyagramı, veri tabanının tam mantıksal yapısını gösterir. Bu kavramı anlamak için basit bir ER diyagramına bakalım.
+
+ER Modelinin Bileşenleri
+ER diyagramının üç ana bileşeni vardır ve bu bileşenler; varlık, nitelik ve ilişkidir.
+
+Veri modelleme nedir?
+Veri modelleme, işletmenizin topladığı ve ürettiği tüm farklı verileri ve bu veri bitleri arasındaki ilişkileri analiz etme ve tanımlama işlemidir. Veri modelleme kavramları, verilerin işletmenizde kullanıldığı gibi görsel temsillerini oluşturur ve işlemin kendisi, veri gereksinimlerinizi anlamada ve netleştirmede bir alıştırmadır.
+
+Key (Anahtar)
+Key (anahtar) veri tabanı içeriğinde, bir veya daha fazla alanın bir satırı nitelemesi amacıyla tanımlanması olarak özetlenebilir. Bir anahtar farklı amaçlar doğrultusunda kullanılabilecek Unique Key (Tekil Anahtar), Primary Key (Birincil Anahtar) ve Foreign Key (Yabancı Anahtar) gibi özel bir tip ile tanımlanabilir.
+
+Karşınıza çıkabilecek diğer anahtar tipler ise şöyle; Super Key, Candidate Key, Alternate Key ve Composite/Compound Key, ancak bu tiplere başka bir yazıda değinmek daha uygun olacaktır. Unutmadan, örnekler ve açıklamalarda anahtarlara dair PRI, UNI, ALT gibi kısaltmalar görülebilir. Karşılaşılabilecek muhtemel durumlara dair parantez içerisinde ek bilgilere yer verdim.
+
+O halde, anahtarlar ve özelliklerine dair açıklamalara geçebiliriz.
+
+Unique Key (UNI / Tekil / Benzersiz Anahtar)
+Unique Key (tekil anahtar), yer aldığı tablo içerisinde bir değeri sadece bir kere alır. İlgili değerin tekrar atanmasına izin verilmez. İşlevi Primary Key (birincil anahtar) ile benzerlik taşısa da, en önemli farklılık Unique Key’in NULL değeri alabilir oluşudur.
+
+Primary Key (PRI / Birincil Anahtar)
+Primary Key (birincil anahtar), bir veri tablosunda yer alan her satır için bir vekil / tanımlayıcı (identify) görevi görür, kısıtlamadır (constraint) ve eşsizdir. Satırlara ait değerlerin karışmaması adına bu alana ait bilginin tekrarlanmaması gerekir. Temel işlevi, verilerin hangi satıra dizileceğine (veya hangi satırda verilerin düzenleneceğine) karar vermesidir. Çoğunlukla tek bir alan (id, user_id, e_mail, username, national_identification_number vb.) olarak kullanılsa da birden fazla alanın birleşimiyle de oluşturulabilir ve genelde sayılar birincil anahtar olarak seçilirler, ancak zorunluluk değildir. Birincil anahtar değeri boş geçilemez ve NULL değer alamaz. İlişkisel veri tabanlarında (relational database management system) mutlaka birincil anahtar olmalıdır. Unutmadan, her birincil anahtar benzersiz iken her benzersiz anahtar birincil değildir. Benzersiz anahtar başlığı altında NULL kullanımına dair bir açıklama düşmüştüm. Bu başlık altında aradaki farklılıkları biraz daha detaylandıralım;
+
+Bir tablo içerisinde birden fazla alan tek bir birincil anahtar ile tanımlanabilir. Ancak, birincil anahtar yapısı her tabloda sadece bir tane olabilir. Benzersiz anahtarda ise böyle bir sınırlama yoktur.
+Birincil anahtarda NULL kullanıma izin verilmez. Acnak, benzersiz anahtarlarda NULL kayıtlara izin verilir.
+Birincil anahtar ile veri tablosu üzerinde bir INDEX tanımı oluşturulur ve her kaydın benzersiz bir tanımı yapılır. Benzersiz anahtar kullanımında ise değerlerin benzersiz olup olmadığına bakılır. Elbette benzersiz anahtarlar da INDEX adıyla tanımlanabilirler ancak bu sadece bir tanımlama olacaktır.
+Foreign Key (Yabancı Anahtar)
+Foreign Key (yabancı anahtar) ikincil anahtar olarak da ifade edilmektedir. Bir veri tablosuna girilebilecek değerleri başka bir veri tablosundaki alanlarla ilişkilendirmeye yarar. Özetle, başka bir tablonun birincil anahtarının bir diğer tablo içerisinde yer almasıdır. Çoğunlukla bir ana tablo (parent) ile alt tablonun (child) ilişkilendirilmesinde kullanılır. Bu sayede olası veri tekrarlarının önüne geçilebilmekte ve ilerleyen zamanda söz konusu olabilecek güncellemelerde ilgili verilerin her yerde güncellenmesi sağlanabilmektedir.
